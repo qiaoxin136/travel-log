@@ -63,6 +63,8 @@ function PlaceDetails() {
         return rows;
     }
 
+
+
     async function addComment(event: SyntheticEvent) {
         event.preventDefault();
         if (comment) {
@@ -88,7 +90,7 @@ function PlaceDetails() {
             )
         }
     }
-    
+
     function renderComments() {
         const rows: any[] = []
         if (place?.comments) {
@@ -109,7 +111,7 @@ function PlaceDetails() {
                 <h2>Details for place {place?.name}</h2><br />
                 <p>{place?.name}</p>
                 <p>{place?.description}</p>
-                {renderPhotos()}<br/>
+                {renderPhotos()}<br />
                 {renderCommentForm()}
                 <p>Comments:</p>
                 {renderComments()}
